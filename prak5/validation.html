@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+</head>
+<body>
+    <h1>validation</h1>
+    <form action="">
+        <label for="">nama pelanggan
+        </label>
+        <input type="text" id="nama_pelanggan" value="">
+        <label for="">email</label>
+        <input type="email" id="email_pelanggan" value="">
+        <label for="">jam keberangkatan</label>
+        <input type="time" id="jam_keberangkatan" value="">
+        <label for="">tujuan keberangkatan</label>
+        <input type="text" id="tujuan_keberangkatan" value="">
+        <label for="">jumlah tiket</label>
+        <input type="number" id="jumlah_tiket" value="" min="1" max="10">
+        <button type="button" onclick="validation()">klik</button>
+
+    </form>
+
+    <p id="nama"></p>
+    <p id="email"></p>
+    <p id="waktu"></p>
+    <p id="tujuan"></p>
+    <p id="jumlah"></p>
+    
+    <script>
+        function validation(){
+            let nama = document.getElementById("nama_pelanggan").value 
+            let email = document.getElementById("email_pelanggan").value 
+            let waktu = document.getElementById("jam_keberangkatan").value 
+            let tujuan = document.getElementById("tujuan_keberangkatan").value 
+            let jumlah_tiket = document.getElementById("jumlah_tiket").value 
+        if (nama == "" || nama.length >= 30 ){
+            alert("nama harus diisi")
+        }
+        else if (email == ""){
+            alert("email harus diisi")
+        }
+        else if (waktu == ""){
+            alert("waktu harus diisi")
+        }
+        else if (tujuan == ""){
+            alert("tujuan harus diisi")
+        }
+        else if (jumlah_tiket == ""){
+            alert("jumlah tiket harus diisi")
+        }
+        else{
+            document.getElementById("nama").innerHTML = nama
+            document.getElementById("email").innerHTML = email
+            document.getElementById("waktu").innerHTML = waktu
+            document.getElementById("tujuan").innerHTML = tujuan
+            document.getElementById("jumlah").innerHTML = jumlah_tiket
+        }
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

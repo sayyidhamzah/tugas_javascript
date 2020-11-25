@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kurs rupiah</title>
+</head>
+<body>
+    <h1>kurs rupiah</h1>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>nilai rupiah</th>
+                <th>mata uang</th>
+                <th>jumlah</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input id="kurs" type="number" value=""></td>
+                <td><select name="" id="mata_uang" onchange="kurs()">
+                    <option value="">pilih mata uang</option>
+                    <option value="dollar">dollar</option>
+                    <option value="ringgit">ringgit</option>
+                </select></td>
+                <td id="hasil"></td>
+            </tr>
+        
+        </tbody>
+    </table>
+
+    <script>
+        function kurs(){
+            let nilai = document.getElementById("kurs").value;
+            let mata_uang = document.getElementById("mata_uang").value;
+            if (mata_uang == "dollar"){
+                hasil = nilai * 15000;
+                document.getElementById('hasil').innerHTML = hasil;
+
+            }
+            else if (mata_uang == "ringgit"){
+                hasil = nilai * 3000
+                document.getElementById('hasil').innerHTML = hasil;
+
+            }
+            else (
+                console.log("mata uang tidak ada")
+            )
+        }
+    </script>
+    
+</body>
+</html>

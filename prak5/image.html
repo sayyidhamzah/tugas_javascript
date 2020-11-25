@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image</title>
+</head>
+<body>
+    <h1>gambar</h1>
+    <select name="" id="motor" onchange="pilih_gambar()">
+        <option value="beat">beat</option>
+        <option value="mio">mio</option>
+        <option value="vario">vario</option>
+    </select>
+    <img src="" alt="" id="gambar">
+    <script>
+        function pilih_gambar(){
+            let jenis_motor = document.getElementById("motor").value;
+            if (jenis_motor == "beat"){
+              document.getElementById("gambar").src =  'beat.jpg';
+            }
+            else if (jenis_motor == "mio"){
+              document.getElementById("gambar").src =  'mio.jpg';
+            }
+            else if (jenis_motor == "vario"){
+              document.getElementById("gambar").src =  'vario.jpg';
+            }
+        }
+    </script>
+</body>
+</html>

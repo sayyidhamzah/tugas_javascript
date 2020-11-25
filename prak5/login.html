@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form action="">
+        <label for="">username</label>
+        <input type="text" id="username" value="">
+        <label for="">password</label>
+        <input type="password"id = "password" value="">
+        <button type="submit" onclick="login()" >login</button>
+    </form>
+    <script>
+        function login(){
+            let username ='hamzah';
+            let password = 'hahaha123';
+            let input_username = document.getElementById("username").value;
+            let input_password = document.getElementById("password").value;
+            if (input_username == username && input_password == password){
+                alert ("berhasil");    
+            }
+            else (
+                alert("maaf anda gagal login")
+            )
+        }
+    </script>
+    
+</body>
+</html>
